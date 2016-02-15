@@ -14,7 +14,7 @@ module Shoppe
             :cancel_url => cancel_url },
           :transactions => [ {
             :amount => {
-              :total => '%.2f' % self.total,
+              :total => '%.2f' % self.balance,
               :currency => Shoppe::Paypal.currency },
             :description => "Total: #{ '%.2f' % self.total }#{Shoppe::Paypal.currency} for Order #{self.number}" } ] } )
 
